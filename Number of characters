@@ -1,0 +1,39 @@
+You’re given a number n. If write all the numbers from 1 to n in a paper, we have to
+find the number of characters written on the paper.For example if n=13, the output
+should be 17 if n = 101, the output should be 195
+
+Input Format
+
+13
+
+Constraints
+
+10<=n<=200
+
+Output Format
+
+17
+
+Sample Input 0
+
+101
+Sample Output 0
+
+195
+=======================================================================================================================================================
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,sum=0,c;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    {
+        c=floor(log10(i))+1;
+          sum=sum+c;
+    }
+    printf("%d",sum);
+    return 0;
+}
