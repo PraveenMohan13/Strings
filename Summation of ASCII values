@@ -1,0 +1,41 @@
+Summation of the ASCII Value of the each character from the given string.
+
+Input Format
+
+abcd
+
+Constraints
+
+Input should be the string
+
+Output Format
+
+394
+
+Sample Input 0
+
+ABCD
+Sample Output 0
+
+266
+Sample Input 1
+
+AbCd
+Sample Output 1
+
+330
+======================================================================================================
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char a[10];
+    int sum=0;
+    scanf("%s",&a);
+    for(int i=0;i<strlen(a);i++)
+        sum=sum+a[i];
+    printf("%d",sum);
+    return 0;
+}
