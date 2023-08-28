@@ -1,0 +1,58 @@
+Write a program to reverse the words itself
+
+Input Format
+
+how are you
+
+Constraints
+
+Only string is allowed
+
+Output Format
+
+woh era uoy
+
+Sample Input 0
+
+when will you come
+Sample Output 0
+
+nehw lliw uoy emoc
+
+=====================================================================================
+#include<stdio.h>
+#include<string.h>
+void reverseSentence(char A[]){
+    int len=strlen(A);
+    int count=0;
+    for(int i=0;A[i];i++){
+        
+        if(A[i]!=' '){
+            count++;
+        }
+         
+        else{
+           
+            for(int j=i-1;j>=(i-count);j--){
+                printf("%c",A[j]);
+            }
+            count=0;
+            printf(" ");
+        }
+    }
+    // for(int i=len-1;i>=len-count;i--){
+    //     printf("%c",A[i]);
+    // }
+    while(count)
+    {
+        
+        printf("%c",A[--len]);
+        count--;
+    }
+}
+int main(void) {
+    char A[20];
+    scanf("%[^\n]s",A);
+    reverseSentence(A);
+    return 0;
+}
