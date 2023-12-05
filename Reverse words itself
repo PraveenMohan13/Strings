@@ -56,3 +56,17 @@ int main(void) {
     reverseSentence(A);
     return 0;
 }
+====================================================================
+import static java.lang.Math.sqrt;
+public class Main {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        String a[]=z.nextLine().split("\\s+");
+        for(int i=0;i<a.length;i++)
+        {
+            for(int j=a[i].length()-1;j>=0;j--)
+                System.out.print(a[i].charAt(j));
+            System.out.print(" ");
+        }    
+    }
+}
