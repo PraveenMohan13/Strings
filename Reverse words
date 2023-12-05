@@ -52,3 +52,13 @@ int main() {
     reverseSentence(A);
     return 0;
 }
+==============================================================================
+import static java.lang.Math.sqrt;
+public class Main {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        String a[]=z.nextLine().split("\\s+");
+        for(int i=a.length-1;i>=0;i--)
+            System.out.println(a[i]);
+    }
+}
