@@ -1,0 +1,12 @@
+// if we want to check if string 2 is present in string 1 we can use this program.
+public class Main {
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        String a=z.nextLine();
+        String b=z.next();
+        if(a.contains(b))
+            System.out.print("true");
+        else
+           System.out.print("false"); 
+    }
+}
