@@ -1,0 +1,76 @@
+Receive the 3 words from user separely, In first word, vowels should be replaced with &, and in the second word, we should replace the consonants with $. In third word, we should change small letters to capital letters. Finally we should append all the words.
+
+Input Format
+
+ramu raja venkat
+
+Constraints
+
+Receive 3 strings separately.
+
+Output Format
+
+r&m&aVENKAT
+
+Sample Input 0
+
+ramu raja venkat
+Sample Output 0
+
+r&m&$a$aVENKAT
+
+=====================================================
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static String vow(String s)
+    { String ans="";
+        for(int i=0;i<s.length();i++)
+        {
+            char t=s.charAt(i);
+            if(t=='a'||t=='e'||t=='i'||t=='o'||t=='u'||t=='A'||t=='E'||t=='I'||t=='O'||t=='U')
+                ans+='&';
+            else
+                ans += t;
+        }
+     return ans;
+            
+    }
+    public static String con(String s)
+    { String ans="";
+        for(int i=0;i<s.length();i++)
+        {
+            char t=s.charAt(i);
+            if(t=='a'||t=='e'||t=='i'||t=='o'||t=='u'||t=='A'||t=='E'||t=='I'||t=='O'||t=='U')
+                ans+=t;
+            else
+                ans += '$';
+        }
+     return ans;
+            
+    }
+    public static String uc(String s)
+    {
+        String ans="";
+        for(int i=0;i<s.length();i++)
+        {
+            char t=s.charAt(i);
+            if(t>='a'&&t<='z')
+                ans += (char)((int)(t)-32);
+            else
+                ans += t;
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        Scanner z=new Scanner(System.in);
+        String a[] = z.nextLine().split(" ");
+        String ans ="";
+        ans += vow(a[0]);
+        ans += con(a[1]);
+        ans += uc(a[2]);
+        System.out.print(ans);
+    }
+}
